@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.v5k'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.liquibase', name: 'liquibase-core', version: '3.8.6'
+
+//    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.2.4.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.2.4.RELEASE'
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.2.4.RELEASE'
+
+    testCompile group: 'com.h2database', name: 'h2', version: '1.4.200'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
